@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "smitheesfoundry:repair_anvil_block",
+    "smitheesfoundry:alloy_smeltery_controller",
+    "smitheesfoundry:alloy_smeltery_drain",
+    "smitheesfoundry:alloy_smeltery_hatch",
+    "smitheesfoundry:alloy_smeltery_faucet",
+    "smitheesfoundry:tank_block",
+    "smitheesfoundry:casting_table_block",
+    "smitheesfoundry:casting_basin_block",
+    "smitheesfoundry:rosegold_block",
+    "smitheesfoundry:ender_resonator",
+    "smitheesfoundry:item_bin_block",
+    "smitheesfoundry:modification_altar_block"
+  ]
+}

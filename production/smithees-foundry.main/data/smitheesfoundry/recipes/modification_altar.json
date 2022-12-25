@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " G ",
+    "GDG",
+    "GGG"
+  ],
+  "key": {
+    "G": {
+      "item": "smitheesfoundry:reinforced_bricks"
+    },
+    "D": {
+      "item": "minecraft:diamond_block"
+    }
+  },
+  "result": {
+    "item": "smitheesfoundry:modification_altar_block",
+    "count": 1
+  }
+}

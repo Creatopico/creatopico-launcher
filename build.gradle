@@ -14,8 +14,8 @@ println """
 subprojects {
     apply plugin: 'java'
 
-    group = 'com.skcraft'
-    version = '4.6-SNAPSHOT'
+    group = 'ru.littleligr'
+    version = '1.0.0'
 
     java {
         toolchain {

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "smitheesfoundry",
+  "version": "${version}",
+
+  "name": "Smithee's Foundry",
+  "description": "A modular tool mod drawing inspiration from tinkers construct",
+  "authors": [
+    "Sussy_Syrup"
+  ],
+  "contact": {
+    "homepage": "https://github.com/sussy-syrup",
+    "sources": "https://github.com/sussy-syrup/the-forge"
+  },
+
+  "license": "MIT",
+  "icon": "assets/smitheesfoundry/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.sussysyrup.smitheesfoundry.Main"
+    ],
+    "client": [
+      "com.sussysyrup.smitheesfoundry.Client"
+    ],
+    "preLaunch": [
+      "com.sussysyrup.smitheesfoundry.PreLaunch"
+    ]
+  },
+  "mixins": [
+    "smitheesfoundry.mixins.json"
+  ],
+  "accessWidener": "smitheesfoundry.accesswidener",
+
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "1.18.2",
+    "java": ">=17"
+  },
+  "suggests": {
+  }
+}

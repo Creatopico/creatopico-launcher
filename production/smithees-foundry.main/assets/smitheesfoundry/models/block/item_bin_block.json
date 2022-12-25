@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "smitheesfoundry:block/reinforced_bricks",
+    "front": "smitheesfoundry:block/item_bin_block",
+    "side":"smitheesfoundry:block/item_bin_block"
+  }
+}

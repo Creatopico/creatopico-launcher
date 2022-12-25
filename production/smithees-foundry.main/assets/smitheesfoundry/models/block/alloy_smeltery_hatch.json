@@ -1,0 +1,12 @@
+{
+	"parent": "minecraft:block/cube",
+	"textures": {
+		"particle": "smitheesfoundry:block/alloy_smeltery_hatch",
+		"north": "smitheesfoundry:block/alloy_smeltery_hatch",
+		"south": "smitheesfoundry:block/alloy_smeltery_hatch",
+		"east": "smitheesfoundry:block/alloy_smeltery_hatch",
+		"west": "smitheesfoundry:block/alloy_smeltery_hatch",
+		"up": "smitheesfoundry:block/reinforced_bricks",
+		"down": "smitheesfoundry:block/reinforced_bricks"
+	}
+}

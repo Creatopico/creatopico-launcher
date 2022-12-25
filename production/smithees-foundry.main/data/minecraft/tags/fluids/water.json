@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values":
+  [
+    "smitheesfoundry:crude_resonator",
+    "smitheesfoundry:flowing_crude_resonator",
+    "smitheesfoundry:resonator",
+    "smitheesfoundry:flowing_resonator"
+  ]
+}

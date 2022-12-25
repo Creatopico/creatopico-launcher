@@ -64,9 +64,7 @@ public class AccountSelectDialog extends JDialog {
 
 		//Start Buttons
 		buttonsPanel.setBorder(BorderFactory.createEmptyBorder(26, 13, 13, 13));
-		if (launcher.getConfig().isOfflineEnabled()) {
-			buttonsPanel.addElement(offlineButton);
-		}
+		buttonsPanel.addElement(removeSelected);
 		buttonsPanel.addGlue();
 		buttonsPanel.addElement(cancelButton);
 		buttonsPanel.addElement(loginButton);
@@ -75,10 +73,10 @@ public class AccountSelectDialog extends JDialog {
 		JPanel loginButtonsRow = new JPanel(new BorderLayout(0, 5));
 		addMojangButton.setAlignmentX(CENTER_ALIGNMENT);
 		addMicrosoftButton.setAlignmentX(CENTER_ALIGNMENT);
-		removeSelected.setAlignmentX(CENTER_ALIGNMENT);
+		offlineButton.setAlignmentX(CENTER_ALIGNMENT);
 		loginButtonsRow.add(addMojangButton, BorderLayout.NORTH);
-		loginButtonsRow.add(addMicrosoftButton, BorderLayout.CENTER);
-		loginButtonsRow.add(removeSelected, BorderLayout.SOUTH);
+		loginButtonsRow.add(addMicrosoftButton, BorderLayout.EAST);
+		loginButtonsRow.add(offlineButton, BorderLayout.SOUTH);
 		loginButtonsRow.setBorder(BorderFactory.createEmptyBorder(0, 10, 0, 0));
 
 		JPanel listAndLoginContainer = new JPanel();
@@ -104,8 +102,15 @@ public class AccountSelectDialog extends JDialog {
 
 		addMicrosoftButton.addActionListener(ev -> attemptMicrosoftLogin());
 
-		offlineButton.addActionListener(ev ->
-				setResult(new OfflineSession(launcher.getProperties().getProperty("offlinePlayerName"))));
+		offlineButton.addActionListener(ev -> {
+			Session newSession = LoginOfflineDialog.showLoginOfflineRequest(this, launcher);
+
+			if (newSession != null) {
+				launcher.getAccounts().update(newSession.toSavedSession());
+				setResult(newSession);
+			}
+		});
+
 
 		removeSelected.addActionListener(ev -> {
 			if (accountList.getSelectedValue() != null) {
